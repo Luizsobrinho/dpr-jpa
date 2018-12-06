@@ -58,8 +58,6 @@ public class Clientedao {
 		try {
 		
 		TypedQuery<Cliente> query = entityManager.createQuery("select c from Cliente c order by " + criterio + " " + order, Cliente.class);
-			//query.setParameter("criterio", criterio);
-			//query.setParameter("o", order);
 			return query.getResultList();
 		}catch (Exception e) {
 			
